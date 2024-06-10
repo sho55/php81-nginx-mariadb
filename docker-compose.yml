@@ -1,6 +1,7 @@
 services:
     
   web: 
+    container_name: myapp-php
     build: ./docker-config/php
     volumes:
       - .:/var/www/
@@ -8,6 +9,7 @@ services:
       - mariadb
 
   nginx:
+    container_name: myapp-nginx
     image: nginx
     build: ./docker-config/nginx
     ports:
@@ -19,6 +21,7 @@ services:
       - web
 
   mariadb:
+    container_name: myapp-mariadb
     image: mariadb
     ports:
       - 3306:3306
@@ -35,6 +38,7 @@ services:
       - ./docker-config/mariadb/data/sql:/docker-entrypoint-initdb.d
 
   # phpmyadmin:
+  #   container_name: myapp-phpmyadmin
   #   image: phpmyadmin/phpmyadmin
   #   environment:
   #     - PMA_ARBITRARY=1
