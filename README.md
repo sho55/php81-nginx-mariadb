@@ -45,9 +45,15 @@
    ```
      web: 
     
-    volumes:
-    - - .:/var/www/
-    + - ./my-app:/var/www/
+       volumes:
+       - - .:/var/www/
+       + - ./my-app:/var/www/
+
+     nginx: 
+    
+       volumes:
+       - - .:/var/www/
+       + - ./my-app:/var/www/
     
    ```
 
