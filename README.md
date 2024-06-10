@@ -18,13 +18,14 @@
 2. **docker composeで立ち上げる。**  
    ダウンロードしたプロジェクトを使って、必要なプログラム（コンテナと呼ばれる）を自動的に起動します。
    ```
-   docker-compose up -d
+   cd php81-nginx-mariadb
+   docker compose up -d
    ```
 
 3. **phpコンテナに入る**  
    起動したプログラムの中の一つ、PHPを使う部分にアクセスします。
    ```
-   docker-compose exec myapp-php bash
+   docker exec -it myapp-php bash
    ```
 
 4. **laravelをインストール**  
@@ -53,5 +54,5 @@
 7. **再度docker composeで立ち上げる**  
    更新した設定で、もう一度プログラムを起動します。
    ```
-   docker-compose up -d
+   docker compose up -d
    ```
