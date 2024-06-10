@@ -7,7 +7,7 @@
 ![docker-compose](https://img.shields.io/badge/docker--compose-1.29-blue.svg)
 
 
-# プロジェクトの立ち上げ方法
+# Laravelプロジェクトの作成方法
 
 1. **cloneする。**  
    プロジェクトのコピーを自分のコンピュータにダウンロードします。
@@ -46,7 +46,7 @@
     
     volumes:
     - - .:/var/www/
-    +  - ./my-app:/var/www/
+    + - ./my-app:/var/www/
     
    ```
 
