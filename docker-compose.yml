@@ -4,7 +4,7 @@ services:
     container_name: myapp-php
     build: ./docker-config/php
     ports:
-    - '5173:5173'
+      - '5173:5173'
     volumes:
       - .:/var/www/
     depends_on:
